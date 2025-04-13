@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '0.5': '0.125rem',
+      },
+      translate: {
+        '0.5': '0.125rem',
+      },
       fontSize: {
         'xs': '0.75rem',
         'sm': '0.875rem',
@@ -21,15 +27,15 @@ module.exports = {
         'pixel': ['Press Start 2P', 'cursive'],
       },
       colors: {
-        'retro-primary': '#8b4513',
-        'retro-secondary': '#cd853f',
-        'retro-accent': '#deb887',
-        'retro-background': '#f5deb3',
+        'retro-primary': '#4682B4',
+        'retro-secondary': '#87CEEB',
+        'retro-accent': '#E0FFFF',
+        'retro-background': '#F0F8FF',
       },
     },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["retro"],
+    themes: ["light"],
   },
 } 
