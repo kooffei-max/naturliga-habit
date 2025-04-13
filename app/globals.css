@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 135, 206, 235;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.875rem;
+  text-transform: none;
+}
+
+.input {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.875rem;
+  text-transform: none;
+}
+
+/* レトロなスタイルのカスタマイズ */
+.card {
+  image-rendering: pixelated;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  image-rendering: pixelated;
+}
+
+/* ボタンのホバーエフェクト */
+.btn:hover {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* 入力フォームのフォーカス時のスタイル */
+.input:focus {
+  outline: none;
+  border-color: #4682B4;
+  box-shadow: 0 0 0 2px #87CEEB;
+}
+
+/* カードのスタイル */
+.quest-card {
+  background-color: white;
+  border: 4px solid #4682B4;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  width: 24rem;
+  position: relative;
+}
+
+.quest-title {
+  font-family: 'Press Start 2P', cursive;
+  color: #4682B4;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.quest-description {
+  font-family: 'Press Start 2P', cursive;
+  color: #87CEEB;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  width: 66.666667%;
+  height: 1rem;
+  background-color: #E0FFFF;
+  border: 2px solid #4682B4;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #87CEEB;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-family: 'Press Start 2P', cursive;
+  color: #4682B4;
+  font-size: 0.75rem;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+/* ボタンのスタイル */
+.btn-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #4682B4;
+  cursor: pointer;
+}
+
+.btn-circle:hover {
+  background-color: #E0FFFF;
+}
+
+.btn-circle.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #4682B4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #87CEEB;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-bordered {
+  border: 2px solid #4682B4;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* 励ましメッセージのスタイル */
+.encouraging-message {
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4682B4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  animation: slideDown 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+  white-space: nowrap;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} 
